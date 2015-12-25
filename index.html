@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>	
+	<header>
+		<canvas id="background"></canvas>
+		
+		<section id="links">
+			<ul>
+				<li><a href="http://facebook.com/prashker">Facebook</a></li>
+				<li><a href="http://www.linkedin.com/pub/samuel-prashker/59/755/a69">LinkedIn</a></li>
+				<li><a href="http://www.freelancer.ca/u/sonicsamz.html">Freelancer</a></li>
+				<li><a href="https://github.com/prashker">GitHub</a></li>
+			</ul>
+		</section>
+		
+	
+		<section id="logo">
+			<img src="name.png"></img>
+		</section>
+		
+		<section id="contact">
+			<ul>
+				<li><a href="https://c.prashker.net/index.php/s/qvMdUUD7X6vRfTQ">Resume</a></li>
+				<li><a href="mailto:web@prashker.net">Contact Me</a></li>
+			</ul>
+		</section>
+	</header>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+	<script>
+		var regenerate = function() {
+			var pattern = Trianglify({
+			  height: document.body.clientHeight,
+			  width: document.body.clientWidth,
+			  variance: "1",
+			  seed: null,
+			  x_colors: 'random',
+			  y_colors: 'match_x',
+			  stroke_width: 0.5,
+			  cell_size: 60}
+			);
+		  	
+			// Bind to a canvas
+			pattern.canvas(document.getElementById('background'));
+		}
+		
+		// Regenerate on resize
+		window.addEventListener("resize", regenerate);
+		
+		regenerate();
+	</script>
+</body>
