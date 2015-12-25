@@ -9,9 +9,8 @@
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>	
-	<header>
-		<canvas id="background"></canvas>
-		
+	<canvas id="background" width="0" height="0"></canvas>
+	<header>	
 		<section id="links">
 			<ul>
 				<li><a href="http://facebook.com/prashker">Facebook</a></li>
@@ -47,6 +46,8 @@
 			  stroke_width: 0.5,
 			  cell_size: 60}
 			);
+			
+			console.log(document.body.clientWidth);
 		  	
 			// Bind to a canvas
 			pattern.canvas(document.getElementById('background'));
