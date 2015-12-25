@@ -6,6 +6,9 @@ body {
   font-family: Myriad Pro;
   margin: 0;
 }
+header {
+	min-height: 100%;
+}
 #logo {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);

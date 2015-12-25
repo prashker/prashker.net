@@ -35,20 +35,22 @@
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 	<script>
+		var root = document.getElementsByTagName('header')[0];
+	
 		var regenerate = function() {
+		
 			var pattern = Trianglify({
-			  height: document.body.clientHeight,
-			  width: document.body.clientWidth,
+			  height: root.offsetHeight,
+			  width: root.offsetWidth,
 			  variance: "1",
 			  seed: null,
 			  x_colors: 'random',
 			  y_colors: 'match_x',
 			  stroke_width: 0.5,
-			  cell_size: 60}
-			);
+			  cell_size: 50 + Math.random()*30,
+			});
+
 			
-			console.log(document.body.clientWidth);
-		  	
 			// Bind to a canvas
 			pattern.canvas(document.getElementById('background'));
 		}
